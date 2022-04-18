@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="LEMO \nMALL"
+        android:textColor="@color/blue"
+        android:textSize="90sp" />
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/email"
+        app:layout_constraintEnd_toEndOf="@+id/txt"
+        app:layout_constraintStart_toStartOf="@+id/txt"
+        app:layout_constraintTop_toBottomOf="@+id/txt"
+        android:textAlignment="center"
+        android:hint="EMAIL"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:padding="15dp"
+        android:background="@drawable/fileds_background"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:textAlignment="center"
+        android:hint="PASSWORD"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:padding="15dp"
+        android:background="@drawable/fileds_background"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/forget_password"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:text="Forget Password?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/forget_password"
+        app:layout_constraintStart_toStartOf="@id/forget_password"
+        app:layout_constraintTop_toBottomOf="@+id/forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_alignParentStart="true"
+            android:id="@+id/txt1"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Don't Have An Account?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/join"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/txt1"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Join Us Here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/login"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/relative"
+        app:layout_constraintStart_toStartOf="@+id/relative"
+        app:layout_constraintTop_toBottomOf="@+id/relative"
+        android:src="@drawable/go"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

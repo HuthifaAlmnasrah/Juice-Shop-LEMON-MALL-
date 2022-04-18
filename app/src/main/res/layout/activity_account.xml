@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <include layout="@layout/main_toolbar"/>
+
+    <ScrollView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10sp"
+                android:id="@+id/linear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/blue"
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="THE"
+                    android:textSize="40dp"
+                    />
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/blue"
+                    android:textSize="90sp"
+                    android:gravity="center"
+                    android:text="LEMO \nMALL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="Healthy Mall in Your Hand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/full_name"
+                app:layout_constraintEnd_toEndOf="@+id/linear"
+                app:layout_constraintStart_toStartOf="@+id/linear"
+                app:layout_constraintTop_toBottomOf="@+id/linear"
+                android:textAlignment="center"
+                android:hint="FULL NAME"
+                android:inputType="text"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:padding="15dp"
+                android:background="@drawable/background_yellow"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_marginTop="15dp"
+                android:id="@+id/phone_number"
+                app:layout_constraintEnd_toEndOf="@+id/full_name"
+                app:layout_constraintStart_toStartOf="@+id/full_name"
+                app:layout_constraintTop_toBottomOf="@+id/full_name"
+                android:textAlignment="center"
+                android:hint="PHONE NUMBER"
+                android:inputType="phone"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:padding="15dp"
+                android:background="@drawable/background_yellow"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_marginTop="15dp"
+                android:id="@+id/email"
+                app:layout_constraintEnd_toEndOf="@+id/phone_number"
+                app:layout_constraintStart_toStartOf="@+id/phone_number"
+                app:layout_constraintTop_toBottomOf="@+id/phone_number"
+                android:textAlignment="center"
+                android:hint="EMAIL"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:padding="15dp"
+                android:background="@drawable/background_yellow"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_marginTop="15dp"
+                android:id="@+id/password"
+                app:layout_constraintEnd_toEndOf="@+id/email"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email"
+                android:textAlignment="center"
+                android:hint="PASSWORD"
+                android:inputType="textPassword"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:padding="15dp"
+                android:background="@drawable/background_yellow"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioGroup
+                android:id="@+id/group"
+                app:layout_constraintEnd_toEndOf="@+id/password"
+                app:layout_constraintStart_toStartOf="@+id/password"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/password">
+
+                <RadioButton
+                    android:id="@+id/cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#4CAF50"
+                    android:checked="true"
+                    android:fontFamily="@font/quicksand_book"
+                    android:text="CASH"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+                <RadioButton
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_book"
+                    android:id="@+id/visa"
+                    android:text="VISA"
+                    android:buttonTint="#4CAF50"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <ImageView
+                android:src="@drawable/back_right"
+                android:id="@+id/save"
+                app:layout_constraintStart_toStartOf="@+id/group"
+                app:layout_constraintTop_toBottomOf="@+id/group"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/save"
+                app:layout_constraintTop_toTopOf="@+id/save"
+                app:layout_constraintStart_toEndOf="@+id/save"
+                android:text="SAVE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

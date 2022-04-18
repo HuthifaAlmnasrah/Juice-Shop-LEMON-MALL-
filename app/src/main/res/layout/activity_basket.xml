@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasketActivity">
+
+    <include layout="@layout/main_toolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:id="@+id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/total"
+        android:background="@drawable/background"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="TOTAL= 30 JD"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/total"
+        app:layout_constraintEnd_toEndOf="@+id/total"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/address"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="ADDRESS"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:textSize="15sp"
+            android:textColorHint="@color/blue"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:hint="-----------------------------------------------------------------------------------------------------------------------------------------------------"
+            android:layout_width="220dp"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/group"
+        app:layout_constraintEnd_toEndOf="@+id/linear"
+        app:layout_constraintStart_toStartOf="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/linear">
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#4CAF50"
+            android:checked="true"
+            android:fontFamily="@font/quicksand_book"
+            android:text="CASH"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black" />
+        <RadioButton
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_book"
+            android:id="@+id/visa"
+            android:text="VISA"
+            android:buttonTint="#4CAF50"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/order_now"
+        app:layout_constraintStart_toStartOf="@+id/group"
+        app:layout_constraintTop_toBottomOf="@+id/group"
+        android:src="@drawable/back_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/order_now_txt"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/order_now"
+        app:layout_constraintTop_toTopOf="@+id/order_now"
+        app:layout_constraintStart_toEndOf="@+id/order_now"
+        android:layout_marginTop="20dp"
+        android:textAlignment="textStart"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:text="ORDER NOW"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
